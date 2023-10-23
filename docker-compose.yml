@@ -19,7 +19,7 @@ services:
   directus:
     image: directus/directus:10.6.4
     ports:
-      - 8055:8055
+      - "5000:8055"
     volumes:
       - ./database:/directus/database
       - ./uploads:/directus/uploads
