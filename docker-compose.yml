@@ -7,7 +7,7 @@ services:
     build:
       context: ./src
     ports:
-      - "5000:5000"
+      - "5000:8055"
     volumes:
       - type: bind
         source: ./src/web
@@ -19,7 +19,7 @@ services:
   directus:
     image: directus/directus:10.6.4
     ports:
-      - "5000:8055"
+      - "8055:8055"
     volumes:
       - ./database:/directus/database
       - ./uploads:/directus/uploads
